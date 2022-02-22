@@ -59,17 +59,22 @@ namespace Cocktails_assignment_H3
         /// <returns></returns>
         public string DeleteById(int id)
         {
-            if (id < Drinklist.Count -1)
+            foreach (var drink in Drinklist)
             {
-                Container container = Drinklist[id];
-                Drinklist.Remove(Drinklist[id]);
-                Drinklist = dbman.GetDrinkList();
-                return container.Blend.Name + " has been removed";
+                if (drink.Id.Equals(id))
+                {
+                    Container container = drink;
+                    dbman.DeleteFromDB(container);
+                    Drinklist = dbman.GetDrinkList();
+                    return container.Id + " has been removed";
+                }
             }
-            else
-            {
-                return "Id is not valid";
-            }
+            return "Id is not valid";
+
+
         }
+            
     }
 }
+
+

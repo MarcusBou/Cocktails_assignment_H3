@@ -125,6 +125,9 @@ namespace Cocktails_assignment_H3
             
         }
 
+        /// <summary>
+        /// Unfortanely i didnt get to finish the update
+        /// </summary>
         public static void UpdateDrinkOnCard()
         {
 
@@ -155,7 +158,7 @@ namespace Cocktails_assignment_H3
                 else
                 {
                     string[] splittedtext = text.Split(',');
-                    if (splittedtext.Length > 2)
+                    if (splittedtext.Length >= 2)
                     {
                         ingredients.Add(new Alcohol(splittedtext[0], splittedtext[1]));
                     }
@@ -181,7 +184,7 @@ namespace Cocktails_assignment_H3
                 else
                 {
                     string[] splittedtext = text.Split(',');
-                    if (splittedtext.Length > 2)
+                    if (splittedtext.Length >= 2)
                     {
                         ingredients.Add(new Soft(splittedtext[0], splittedtext[1]));
                     }
@@ -206,7 +209,7 @@ namespace Cocktails_assignment_H3
                 else
                 {
                     string[] splittedtext = text.Split(',');
-                    if (splittedtext.Length > 2)
+                    if (splittedtext.Length >= 2)
                     {
                         ingredients.Add(new Garnish(splittedtext[0], splittedtext[1]));
                     }

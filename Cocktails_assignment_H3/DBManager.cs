@@ -34,5 +34,11 @@ namespace Cocktails_assignment_H3
             ctx.containers.Add(container);
             ctx.SaveChanges();
         }
+
+        public void DeleteFromDB(Container conn)
+        {
+            ctx.containers.Remove(conn);
+            ctx.SaveChanges();
+        }
     }
 }
