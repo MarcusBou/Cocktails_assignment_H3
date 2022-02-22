@@ -8,6 +8,7 @@ namespace Cocktails_assignment_H3
 {
     public class Alcohol : Liquid
     {
+        public Alcohol() { }
         public Alcohol(string name, string amount) : base(name, amount)
         {
         }

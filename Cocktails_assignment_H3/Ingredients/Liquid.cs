@@ -8,6 +8,7 @@ namespace Cocktails_assignment_H3
 {
     public abstract class Liquid : Ingredient
     {
+        protected Liquid(){}
         protected Liquid(string name, string amount) : base(name, amount)
         {
         }

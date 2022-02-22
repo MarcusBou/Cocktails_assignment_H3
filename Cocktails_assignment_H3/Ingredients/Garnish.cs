@@ -8,6 +8,7 @@ namespace Cocktails_assignment_H3
 {
     public class Garnish : Ingredient
     {
+        public Garnish() { }
         public Garnish(string name, string amount) : base(name, amount)
         {
         }
